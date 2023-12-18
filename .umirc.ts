@@ -1,7 +1,29 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
-  antd: {},
+  antd: {
+    // configProvider
+    configProvider: {},
+    // themes
+    dark: true,
+    compact: false,
+    // babel-plugin-import
+    import: false,
+    // less or css, default less
+    style: 'less',
+    // shortcut of `configProvider.theme`
+    // use to configure theme token, antd v5 only
+    theme: {},
+    // antd <App /> valid for version 5.1.0 or higher, default: undefined
+    appConfig: {},
+    // Transform DayJS to MomentJS
+    momentPicker: true,
+    // Add StyleProvider for legacy browsers
+    styleProvider: {
+      hashPriority: 'high',
+      legacyTransformer: true,
+    },
+  },
   access: {},
   model: {},
   initialState: {},
@@ -9,6 +31,7 @@ export default defineConfig({
   layout: {
     title: '@umijs/max',
   },
+  headScripts: [{ src: '/scripts/loading.js', async: true }],
   routes: [
     {
       path: '/',

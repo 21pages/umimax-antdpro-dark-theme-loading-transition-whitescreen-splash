@@ -119,6 +119,26 @@ const TableList: React.FC<unknown> = () => {
       },
     },
     {
+      title: 'Col1',
+      dataIndex: 'col1',
+      valueType: 'text',
+    },
+    {
+      title: 'Col2',
+      dataIndex: 'col2',
+      valueType: 'text',
+    },
+    {
+      title: 'Col3',
+      dataIndex: 'col3',
+      valueType: 'text',
+    },
+    {
+      title: 'Col4',
+      dataIndex: 'col4',
+      valueType: 'text',
+    },
+    {
       title: '操作',
       dataIndex: 'option',
       valueType: 'option',
@@ -151,6 +171,7 @@ const TableList: React.FC<unknown> = () => {
         rowKey="id"
         search={{
           labelWidth: 120,
+          filterType: 'light',
         }}
         toolBarRender={() => [
           <Button
